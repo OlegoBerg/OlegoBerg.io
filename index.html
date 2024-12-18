@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салахутдинов Олег</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Салахутдинов Олег</h1>
+        <p>Работник цеха №1, 
+            <span class="tooltip">ООО "Элкон"
+                <span class="tooltiptext">Предприятие, занимающееся разработкой и производством лакокрасочных материалов</span>
+            </span>
+        </p>
+    </header>
+
+    <section class="photo">
+        <img src="y7ivWAUGir8.jpg" alt="Фотография Салахутдинова Олега" id="mainPhoto">
+    </section>
+
+    <section class="about">
+        <h2>Обо мне</h2>
+        <p>Меня зовут Салахутдинов Олег, и я работаю в компании <span class="tooltip">ООО "Элкон"
+        <span class="tooltiptext">Предприятие, занимающееся разработкой и производством лакокрасочных материалов</span>
+        </span> в качестве аппаратчика смешивания в цехе №1. Моя основная задача - участие в производственном процессе смывок и краски, а также в производстве разрыхлителей для различных применений.</p>
+    </section>
+
+    <section class="production">
+        <h2>Производственные процессы</h2>
+        <ul>
+            <li>
+                <a href="products/product.html?title=Смывка%20краски&image=images/smivka.jpg&description=Используется%20для%20удаления%20старых%20покрытий.">
+                    Производство смывки краски
+                </a>
+            </li>
+            <li>
+                <a href="products/product.html?title=Разрыхлитель%20краски&image=images/razryxlitel.jpg&description=Предназначен%20для%20размягчения%20изоляционных%20лаковых%20обмоток%20электродвигателей.">
+                    Производство разрыхлителя краски
+                </a>
+            </li>
+<li>
+                <a href="products/product.html?title=Elcon%20Al&image=images/Al.jpg&description=Предназначена%20для%20антикоррозионной%20защиты%20металлических%20изделий%20и%20сооружений.">
+                    Производство антикоррозионной атмосферостойкой эмали Elcon AL
+                </a>
+            </li>
+<li>
+                <a href="products/product.html?title=Elcon%20Alume&image=images/Alume.jpg&description=Предназначен%20для%20антикоррозионной%20защиты%20черных%20металлов.">
+                    Производство cостава для холодного цинкования Elcon Zintech Alume
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>ООО "Элкон" - разработчик и производитель лакокрасочных материалов для промышленности и домохозяйств.</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img src="" alt="" id="modalImage">
+    </div>
+
+    <script>
+        // Модальное окно для изображений
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modalImage");
+        const closeModal = document.getElementById("closeModal");
+
+        // Закрытие модального окна
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // Закрытие модального окна при клике вне изображения
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
